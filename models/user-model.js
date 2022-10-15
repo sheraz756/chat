@@ -15,7 +15,7 @@ const userSchema = new Schema(
                 return avatar;
             },
         },
-        activated: { type: Boolean, required: false, default: false },
+        activated: { type: Boolean, required: true, default: true },
     },
     {
         timestamps: true,
