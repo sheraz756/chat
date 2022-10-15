@@ -33,7 +33,7 @@ app.use(express.json({ limit: '8mb' }));
 app.use(router);
 
 app.get('/', (req, res) => {
-    res.send('Hello from express Js');
+    res.send('Hello from express');
 });
 
 // Sockets
