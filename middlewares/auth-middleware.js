@@ -3,6 +3,7 @@ const tokenService = require('../services/token-service');
 module.exports = async function (req, res, next) {
     try {
         const { accessToken } = req.cookies;
+        console.log('access token',accessToken)
         if (!accessToken) {
             throw new Error();
         }
@@ -13,6 +14,6 @@ module.exports = async function (req, res, next) {
         req.user = userData;
         next();
     } catch (err) {
-        res.status(401).json({ message: 'Invalid token' });
+        res.status(401).json({ message: 'Invalid token',cookies:req.cookies });
     }
 };
