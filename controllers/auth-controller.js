@@ -70,12 +70,12 @@ class AuthController {
         await tokenService.storeRefreshToken(refreshToken, user._id);
 
         res.cookie('refreshToken', refreshToken, {
-            maxAge: 1000 * 60 * 60 * 24 * 30,
+            maxAge:9999999999,
             httpOnly: true,
         });
 
         res.cookie('accessToken', accessToken, {
-            maxAge: 1000 * 60 * 60 * 24 * 30,
+            maxAge: 9999999999,
             httpOnly: true,
         });
 
@@ -125,12 +125,12 @@ class AuthController {
         }
         // put in cookie
         res.cookie('refreshToken', refreshToken, {
-            maxAge: 1000 * 60 * 60 * 24 * 30,
+            maxAge: 9999999999,
             httpOnly: true,
         });
 
         res.cookie('accessToken', accessToken, {
-            maxAge: 1000 * 60 * 60 * 24 * 30,
+            maxAge: 9999999999,
             httpOnly: true,
         });
         // response
