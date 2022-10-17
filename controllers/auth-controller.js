@@ -122,13 +122,13 @@ class AuthController {
     }
     // put in cookie
     res.cookie("refreshToken", refreshToken, {
-      maxAge: 1000 * 60 * 60 * 24 * 30,
-      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24 * 30*100,
+      httpOnly: false,
     });
 
     res.cookie("accessToken", accessToken, {
-      maxAge: 1000 * 60 * 60 * 24 * 30,
-      httpOnly: true,
+      maxAge: 1000 * 60 * 60 * 24 * 30*100,
+      httpOnly: false,
     });
     // response
     const userDto = new UserDto(user);
