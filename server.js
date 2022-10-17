@@ -14,7 +14,6 @@ const io = require("socket.io")(server, {
     origin: "http://anonytesting-cf.preview-domain.com",
     credentials: true,
     methods: ["GET", "POST"],
-    origin: "*",
   },
 });
 
