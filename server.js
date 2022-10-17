@@ -22,7 +22,7 @@ app.get('/',(req,res)=>{
 app.use(cookieParser());
 const corsOption = {
     credentials: true,
-    origin: 'https://anonytest.herokuapp.com',
+    origin: 'http://localhost:3000',
 };
 app.use(cors(corsOption));
 app.use('/storage', express.static('storage'));
