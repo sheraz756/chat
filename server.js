@@ -21,7 +21,7 @@ app.get("/", (req, res) => {
 app.use(cookieParser());
 // const corsOption = {};
 app.use(cors({
-    origin: "http://anonytesting-cf.preview-domain.com",
+    origin: "http://anonytesting.cf",
     credentials: true,
     methods: ["GET", "POST"],
 }));
