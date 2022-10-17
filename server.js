@@ -10,19 +10,21 @@ const env = require("dotenv");
 const ACTIONS = require("./actions");
 
 const io = require("socket.io")(server, {
-  cors: {
-    origin: "http://anonytesting-cf.preview-domain.com",
-    credentials: true,
-    methods: ["GET", "POST"],
-  },
+//   cors: {
+    
+//   },
 });
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname, "public");
 });
 app.use(cookieParser());
-const corsOption = {};
-app.use(cors());
+// const corsOption = {};
+app.use(cors({
+    origin: "http://anonytesting-cf.preview-domain.com",
+    credentials: true,
+    methods: ["GET", "POST"],
+}));
 app.use("/storage", express.static("storage"));
 
 const PORT = process.env.PORT || 5500;
