@@ -22,7 +22,7 @@ app.get('/',(req,res)=>{
 app.use(cookieParser());
 const corsOption = {
     credentials: true,
-    origin: 'http://anonytesting-cf.preview-domain.com',
+    origin: '*',
 };
 app.use(cors(corsOption));
 app.use('/storage', express.static('storage'));
