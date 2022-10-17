@@ -21,9 +21,12 @@ app.get("/", (req, res) => {
 app.use(cookieParser());
 // const corsOption = {};
 app.use(cors({
-    origin: "http://anonytesting.cf",
-    credentials: true,
-    methods: ["GET", "POST"],
+    'Access-Control-Allow-Origin': '*',
+'Access-Control-Allow-Methods': 'GET,HEAD,PUT,PATCH,POST,DELETE',
+'Vary': 'Access-Control-Request-Headers',
+'Access-Control-Allow-Headers': 'Content-Type, Accept',
+'Content-Length': 0,
+Connection: keep-alive
 }));
 app.use("/storage", express.static("storage"));
 
